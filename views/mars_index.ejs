@@ -1,0 +1,23 @@
+<body>
+    <h1>Welcome to Mars</h1>
+    <ul style="text-align: left;">
+        <% for(let i = 0; i < marsMissions.length; i++) {%>
+            <li>
+               <a href="/mars/<%=i%>">
+                <% let mars = marsMissions[i].name;
+                    let capitalized = mars.charAt(0).toUpperCase() + mars.slice(1);%>
+                <%= capitalized%>
+               </a>
+            </li>
+        <%}%>
+    </ul>
+    <a href="/">Back</a>
+  </body>
+  
+  <style type="text/css">
+    body {
+      color: blanchedalmond;
+      background-color: steelblue;
+    }
+  </style>
+  </html>
